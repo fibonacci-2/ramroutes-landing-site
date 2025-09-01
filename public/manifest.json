@@ -1,9 +1,9 @@
 {
-  "short_name": "AmpliChat - Stay Connected at Events",
-  "name": "Amplichat - Stay Connected at Events. Chat with other attendees and make new friends at your favorite events and concerts.",
+  "short_name": "RamRoutes - Discover your Campus",
+  "name": "RamRoutes - Discover your Campus",
   "icons": [
     {
-      "src": "amplichat_icon.ico",
+      "src": "",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

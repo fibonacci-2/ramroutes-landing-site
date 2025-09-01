@@ -104,13 +104,13 @@ function Mobile() {
                         </Typography>
                     </Row>
 
-                    <Row justify='space-around'>
+                    <Row justify='space-around' style={{ 'marginBottom': '30px'}}>
                         {
                             state.appleStoreLink &&
-                            <Col style={{'width': '45%'}}>
+                            <Col style={{'width': '45%', 'paddingRight': '50px'}}>
                                 <Row justify='center'>
                                 <a href={state.appleStoreLink} target='_blank' rel="noopener noreferrer">
-                                    <Image height={50} preview={false} src={state.appleStoreBadge}></Image>
+                                    <Image height={50} width={150} preview={false} src={state.appleStoreBadge}></Image>
                                 </a>
                                 </Row>
                             </Col>
@@ -120,7 +120,7 @@ function Mobile() {
                             <Col style={{'width': '45%'}}>
                                 <Row justify='center'>
                                 <a href={state.googlePlayLink} target='_blank' rel="noopener noreferrer">
-                                    <Image height={50} style={{'padding': '2px 0'}} preview={false} src={state.googlePlayBadge}></Image>
+                                    <Image height={50} width={150} preview={false} src={state.googlePlayBadge}></Image>
                                 </a>
                                 </Row>
                             </Col>
@@ -172,25 +172,27 @@ function Mobile() {
 
                 {/* policies */}
                 <Row justify='center' align='top' style={{'backgroundColor': 'white', 'height': '450px', 'padding': '70px 20px'}}>
-                
+{/*                 
                     <Row justify='center' align='top' style={{'width': '100%'}}>
                         <Button type="primary" shape="round" icon={<DownloadOutlined />} size='large' danger onClick={() => { window.scrollTo(0, 0)}}>Download</Button>
-                    </Row>
+                    </Row> */}
 
-                    <Row justify='space-around' align='top' style={{'width': '100%'}}>
+                    <Row justify='space-around' align='top' style={{'width': '100%','marginTop': '100px'}}>
                         <Col>
                             <Row justify='start' align='middle'>
-                                <Typography>
-                                    Who we are
-                                </Typography>
+                                 <a href={state.appURL + '/who-we-are'} target='_blank' rel="noopener noreferrer">
+                                <Typography.Title level={5} style={{'margin': '0px','marginTop': '20px'}}>
+                                    Who we are?
+                                </Typography.Title>
+                            </a>
                             </Row>
-                            <Row justify='start' align='middle' style={{'marginTop': '20px'}}>
+                            {/* <Row justify='start' align='middle' style={{'marginTop': '20px'}}>
                             <a href={state.appURL + '/policy/cookies'} target='_blank' rel="noopener noreferrer">
                                 <Typography.Title level={5} style={{'margin': '0px'}}>
                                     Cookies Policy
                                 </Typography.Title>
                             </a>
-                            </Row>
+                            </Row> */}
                             <Row justify='start' align='middle' style={{'marginTop': '20px'}}>
                             <a href={state.appURL + '/policy/privacy'} target='_blank' rel="noopener noreferrer">
                                 <Typography.Title level={5} style={{'margin': '0px'}}>
@@ -201,7 +203,7 @@ function Mobile() {
                             <Row justify='start' align='middle' style={{'marginTop': '20px'}}>
                             <a href={state.appURL + '/policy/terms'} target='_blank' rel="noopener noreferrer">
                                 <Typography.Title level={5} style={{'margin': '0px'}}>
-                                    Terms of Service
+                                    RamRoutes Support
                                 </Typography.Title>
                             </a>
                             </Row>
@@ -209,12 +211,12 @@ function Mobile() {
 
 
                         <Col >
-                            <Row justify='start' align='middle'>
+                            {/* <Row justify='start' align='middle'>
                                 <Typography>
                                     Need help?
                                 </Typography>
-                            </Row>
-                            <Row justify='start' align='middle' style={{'cursor': 'pointer', 'marginTop': '20px'}}>
+                            </Row> */}
+                            {/* <Row justify='start' align='middle' style={{'cursor': 'pointer', 'marginTop': '20px'}}>
                                 <Popover placement='top' title='Contact Us' content={
                                     <a href={state.discordLink} target='_blank' rel="noopener noreferrer">
                                         <Row justify='start' align='middle'>
@@ -232,7 +234,7 @@ function Mobile() {
                                         Contact Us
                                     </Typography.Title>
                                 </Popover>
-                            </Row>
+                            </Row> */}
                             
                         </Col>
 
