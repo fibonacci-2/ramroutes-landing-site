@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.2108357c.js",
+    "main.js": "/static/js/main.6daa097a.js",
     "static/js/787.1966b5b1.chunk.js": "/static/js/787.1966b5b1.chunk.js",
-    "static/media/app_4.png": "/static/media/app_4.6b8a6efdf1304273ae6e.png",
+    "static/media/Untitled_Artwork.png": "/static/media/Untitled_Artwork.81e1c55f93f67cf17659.png",
     "static/media/purple_phones.png": "/static/media/purple_phones.89363e795946e1aecd48.png",
     "static/media/concert_classic.jpg": "/static/media/concert_classic.eddfc9fc5ea788a66b35.jpg",
     "static/media/voice_mirror_v_1024.png": "/static/media/voice_mirror_v_1024.b94d9d8e3bf4afaf04c8.png",
@@ -20,11 +20,11 @@
     "static/media/apple.png": "/static/media/apple.42e53626190d214e66fc.png",
     "index.html": "/index.html",
     "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.2108357c.js.map": "/static/js/main.2108357c.js.map",
+    "main.6daa097a.js.map": "/static/js/main.6daa097a.js.map",
     "787.1966b5b1.chunk.js.map": "/static/js/787.1966b5b1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.2108357c.js"
+    "static/js/main.6daa097a.js"
   ]
 }

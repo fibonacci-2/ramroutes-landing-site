@@ -5,7 +5,7 @@ import appLogo from '../images/amplichat.png'
 import appleStoreBadge from '../images/apple.png'
 import googlePlayBadge from '../images/google.png'
 
-import coverImage from '../images/app_4.png'
+import coverImage from '../images/Untitled_Artwork.png'
 
 // endorsement images
 import dreamhub_filled from '../images/dreamhub_filled.png'
@@ -27,15 +27,15 @@ import discordImage from '../images/discord.png'
 
 export const initialState = {
     // when in dev, change appURL to local url
-    appURL: 'http://localhost:3000',  
+    // appURL: 'http://localhost:3000',  
     // when in production, change appURL to real url
-    // appURL: 'https://amplichat.com',
+    appURL: 'https://ramroutes.web.app',
 
     appLogo: appLogo,
     appName: 'RamRoutes',
 
     coverTitle: 'Discover the magic of Campus',
-    coverText: 'Join RamRoutes and Discover new friends, events, and places around you!',
+    coverText: 'Join RamRoutes and connect with your campus community!',
     appleStoreBadge: appleStoreBadge,
     appleStoreLink: 'https://apps.apple.com/us/app/ramroutes/id6749616671',
     googlePlayBadge: googlePlayBadge,

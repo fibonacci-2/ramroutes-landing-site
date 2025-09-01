@@ -7,6 +7,7 @@ import Mobile from './Mobile'
 import Cookies from './policy/cookies'
 import Privacy from './policy/privacy'
 import Terms from './policy/terms'
+import WhoWeAre from './policy/who-we-are'
 
 
 import {
@@ -28,6 +29,7 @@ function RouteElementsDesktop() {
     { path: '/policy/cookies', element: <Cookies /> },
     { path: '/policy/privacy', element: <Privacy /> },
     { path: '/policy/terms', element: <Terms /> },
+    { path: '/who-we-are', element: <WhoWeAre /> },
   ]);
   return routeElements
 }
@@ -38,6 +40,7 @@ function RouteElementsMobile() {
     { path: '/policy/cookies', element: <Cookies /> },
     { path: '/policy/privacy', element: <Privacy /> },
     { path: '/policy/terms', element: <Terms /> },
+    { path: '/who-we-are', element: <WhoWeAre /> },
   ]);
   return routeElements
 }
