@@ -8,6 +8,8 @@ import Cookies from './policy/cookies'
 import Privacy from './policy/privacy'
 import Terms from './policy/terms'
 import WhoWeAre from './policy/who-we-are'
+import HowItWorks from './how-it-works'
+import Admin from './pages/Admin'
 
 
 import {
@@ -28,8 +30,10 @@ function RouteElementsDesktop() {
     { path: '/', element: <Desktop /> },
     { path: '/policy/cookies', element: <Cookies /> },
     { path: '/policy/privacy', element: <Privacy /> },
-    { path: '/policy/terms', element: <Terms /> },
+    // { path: '/policy/terms', element: <Terms /> },
     { path: '/who-we-are', element: <WhoWeAre /> },
+    { path: '/how-it-works', element: <HowItWorks /> },
+    { path: '/admin', element: <Admin /> },
   ]);
   return routeElements
 }
@@ -39,8 +43,10 @@ function RouteElementsMobile() {
     { path: '/', element: <Mobile /> },
     { path: '/policy/cookies', element: <Cookies /> },
     { path: '/policy/privacy', element: <Privacy /> },
-    { path: '/policy/terms', element: <Terms /> },
+    // { path: '/policy/terms', element: <Terms /> },
     { path: '/who-we-are', element: <WhoWeAre /> },
+    { path: '/how-it-works', element: <HowItWorks /> },
+    { path: '/admin', element: <Admin /> },
   ]);
   return routeElements
 }

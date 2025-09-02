@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+/* Responsive Navigation Menu */
+@media (min-width: 769px) {
+  .desktop-menu {
+    display: flex !important;
+  }
+  .mobile-menu-button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  .mobile-menu-button {
+    display: inline-flex !important;
+  }
+}

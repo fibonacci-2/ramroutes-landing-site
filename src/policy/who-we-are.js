@@ -1,5 +1,7 @@
 import { Typography, Row, Col, Form, Input, Button, message } from 'antd'
 import { useState } from 'react'
+import { colors, PRIMARY_COLOR } from '../config/colors'
+import { teamApplicationsService } from '../config/firestoreService'
 
 const { TextArea } = Input
 
@@ -10,9 +12,26 @@ function WhoWeAre() {
     const handleSubmit = async (values) => {
         setLoading(true)
         try {
-            // Create email content
-            const subject = encodeURIComponent(`RamRoutes Team Application - ${values.role}`)
-            const body = encodeURIComponent(`Hi RamRoutes Team,
+            // First, save to Firestore using the service
+            const applicationData = {
+                name: values.name,
+                email: values.email,
+                role: values.role,
+                message: values.message,
+                processed: false
+            };
+
+            const docId = await teamApplicationsService.add(applicationData); // No admin mode for user forms
+
+            // Then send email via Web3Forms
+            const web3formsAccessKey = '5c0685d8-7695-48a3-be3c-1bc7b2a941c6';
+
+            const formData = {
+                access_key: web3formsAccessKey,
+                name: values.name,
+                email: values.email,
+                subject: `RamRoutes Team Application - ${values.role}`,
+                message: `Hi RamRoutes Team,
 
 I'm interested in joining your team and contributing to your mission of transforming campus life.
 
@@ -26,30 +45,36 @@ ${values.message}
 Looking forward to hearing from you!
 
 Best regards,
-${values.name}`)
-            
-            // Multiple recipients
-            const recipients = [
-                'gosaadmakhal@gmail.com',
-                'jseibel25@cornellcollege.edu',
-                'smankarious26@cornellcollege.edu',
-                'josieseibel@gmail.com'
-            ].join(',')
-            
-            // Create mailto link with multiple recipients
-            const mailtoLink = `mailto:${recipients}?subject=${subject}&body=${body}`
-            
-            // Open email client
-            window.open(mailtoLink, '_blank')
-            
-            message.success('Your email client has been opened with a pre-filled message to the RamRoutes team. Please review and send!')
-            form.resetFields()
+${values.name}`,
+                // Optional: specify recipient email
+                to: 'gosaadmakhal@gmail.com,jseibel25@cornellcollege.edu,smankarious26@cornellcollege.edu,josieseibel@gmail.com'
+            };
+
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                message.success('Thank you! Your application has been saved and sent successfully. We\'ll get back to you soon!');
+                form.resetFields();
+            } else {
+                // Email failed but Firestore succeeded
+                message.success('Thank you! Your application has been saved successfully. We have your information and will get back to you soon!');
+                form.resetFields();
+            }
             
         } catch (error) {
-            console.error('Error creating email:', error)
-            message.error('Something went wrong. Please email us directly at the team addresses listed below.')
+            console.error('Error sending application:', error);
+            message.error('Sorry, there was an error saving your application. Please try again or email us directly at gosaadmakhal@gmail.com');
         } finally {
-            setLoading(false)
+            setLoading(false);
         }
     }
 
@@ -74,7 +99,7 @@ ${values.name}`)
                     </Typography.Paragraph>
 
                     <Typography.Paragraph>
-                        As recent graduates ourselves, we experienced firsthand how easy it is to fall into routine patterns—walking the same paths to class, eating at the same dining halls, and studying in the same spots. We realized that this limited exploration meant missing out on countless opportunities for discovery, community building, and creating memorable college experiences.
+                        As recent graduates ourselves, we experienced firsthand how easy it is to fall into routine patterns, walking the same paths to class, eating at the same dining hall, and studying in the same spots. We realized that this limited exploration meant missing out on countless opportunities for discovery, community building, and creating memorable college experiences.
                     </Typography.Paragraph>
 
                     <Typography.Paragraph>
@@ -157,7 +182,7 @@ ${values.name}`)
 
                     <Typography component='div' style={{'marginLeft': '20px'}}>
                         <Typography.Paragraph>
-                            • Software developers with mobile app experience
+                            • Software developers with mobile app/game engine experience (e.g., CSharp, Unity, Javascript)
                         </Typography.Paragraph>
                         <Typography.Paragraph>
                             • UX/UI designers passionate about gamification
@@ -166,7 +191,7 @@ ${values.name}`)
                             • Marketing professionals who understand student audiences
                         </Typography.Paragraph>
                         <Typography.Paragraph>
-                            • Campus partnership specialists and student affairs professionals
+                            • Creative Writing and Content Creation enthusiasts
                         </Typography.Paragraph>
                         <Typography.Paragraph>
                             • Anyone with innovative ideas for enhancing student engagement
@@ -180,10 +205,6 @@ ${values.name}`)
                     <Typography.Paragraph>
                         Ready to help us revolutionize campus life? Send us a message and tell us how you'd like to contribute to our mission.
                     </Typography.Paragraph>
-
-                    {/* <Typography.Paragraph style={{'backgroundColor': '#f6f8fa', 'padding': '15px', 'borderRadius': '6px', 'border': '1px solid #d1d9e0'}}>
-                        <strong>📧 How it works:</strong> When you submit this form, it will open your default email client with a pre-filled message to send to our team. This ensures your message reaches us securely and allows you to review before sending.
-                    </Typography.Paragraph> */}
 
                     <Form
                         form={form}
@@ -240,19 +261,17 @@ ${values.name}`)
                                 htmlType="submit" 
                                 loading={loading}
                                 size="large"
-                                style={{'backgroundColor': '#1890ff'}}
+                                style={{'backgroundColor': PRIMARY_COLOR, 'borderColor': PRIMARY_COLOR}}
                             >
-                                📧 Open Email Client
+                                {loading ? 'Sending...' : '� Send Application'}
                             </Button>
                         </Form.Item>
                     </Form>
 
                     <Typography.Paragraph style={{'marginTop': '30px', 'color': 'gray', 'fontSize': '14px'}}>
                         <strong>You can also reach us directly at:</strong><br />
-                        <a href='mailto:gosaadmakhal@gmail.com' style={{'color': '#1890ff'}}>gosaadmakhal@gmail.com</a><br />
-                        <a href='mailto:jseibel25@cornellcollege.edu' style={{'color': '#1890ff'}}>jseibel25@cornellcollege.edu</a><br />
-                        <a href='mailto:smankarious26@cornellcollege.edu' style={{'color': '#1890ff'}}>smankarious26@cornellcollege.edu</a><br />
-                        <a href='mailto:josieseibel@gmail.com' style={{'color': '#1890ff'}}>josieseibel@gmail.com</a>
+                        <a href='mailto:gosaadmakhal@gmail.com' style={{'color': PRIMARY_COLOR}}>gosaadmakhal@gmail.com</a><br />
+                        <a href='mailto:josieseibel@gmail.com' style={{'color': PRIMARY_COLOR}}>josieseibel@gmail.com</a>
                     </Typography.Paragraph>
 
                 </Col>

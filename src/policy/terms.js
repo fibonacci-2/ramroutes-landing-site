@@ -30,34 +30,38 @@ function Terms() {
                 </Typography.Title>
 
                 <Typography.Paragraph>
-                RamRoutes is a carpooling app designed to help college students find and share rides. You may use the app to:
+                RamRoutes is a campus discovery and community app designed to help college students explore their campus and connect with fellow students. You may use the app to:
                 </Typography.Paragraph>
 
                 <Typography component='div' style={{'marginLeft': '40px'}}>
                 <Typography.Paragraph>
-                    • Find available rides posted by other users
+                    • Explore campus locations and discover new places in a fun way
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    • Post rides you are offering to other users
+                    • Connect and engage with fellow students (fellow rams)
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    • Communicate with other users about ride arrangements
+                    • Stay informed about campus events and activities
+                </Typography.Paragraph>
+
+                <Typography.Paragraph>
+                    • Participate in the campus community
                 </Typography.Paragraph>
                 </Typography>
 
                 <Typography.Title level={3}>
-                SAFETY AND LIABILITY
+                SAFETY AND COMMUNITY
                 </Typography.Title>
 
                 <Typography.Paragraph>
-                RamRoutes is a platform that connects users for carpooling. We do not provide transportation services ourselves. You understand that:
+                RamRoutes is a platform that connects college students to explore campus and participate in community activities. You understand that:
                 </Typography.Paragraph>
 
                 <Typography component='div' style={{'marginLeft': '40px'}}>
                 <Typography.Paragraph>
-                    • All rides are arranged directly between users
+                    • All interactions and activities are between users
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
@@ -65,11 +69,11 @@ function Terms() {
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    • You participate in rides at your own risk
+                    • You participate in campus activities at your own discretion
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    • We recommend meeting in safe, public locations
+                    • We encourage respectful and safe interactions with fellow students
                 </Typography.Paragraph>
                 </Typography>
 
@@ -83,15 +87,15 @@ function Terms() {
 
                 <Typography component='div' style={{'marginLeft': '40px'}}>
                 <Typography.Paragraph>
-                    • Provide accurate and truthful information about yourself and your rides
+                    • Provide accurate and truthful information about yourself
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    • Be respectful and courteous to other users
+                    • Be respectful and courteous to other students and community members
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    • Use the app only for legitimate carpooling purposes
+                    • Use the app only for legitimate campus exploration and community engagement
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
@@ -99,7 +103,7 @@ function Terms() {
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    • Comply with all applicable laws and regulations
+                    • Comply with all applicable laws, regulations, and campus policies
                 </Typography.Paragraph>
                 </Typography>
 
@@ -150,7 +154,7 @@ function Terms() {
                 </Typography.Title>
 
                 <Typography.Paragraph>
-                RamRoutes is provided "as is" without warranties of any kind. We do not guarantee the availability, reliability, or safety of rides arranged through our app. Use of our service is at your own risk.
+                RamRoutes is provided "as is" without warranties of any kind. We do not guarantee the availability or reliability of campus information, events, or user interactions arranged through our app. Use of our service is at your own discretion.
                 </Typography.Paragraph>
 
                 <Typography.Title level={3}>

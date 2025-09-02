@@ -34,12 +34,12 @@ export const initialState = {
     appLogo: appLogo,
     appName: 'RamRoutes',
 
-    coverTitle: 'Discover the magic of Campus',
+    coverTitle: 'Discover the Magic of Campus',
     coverText: 'Join RamRoutes and connect with your campus community!',
     appleStoreBadge: appleStoreBadge,
     appleStoreLink: 'https://apps.apple.com/us/app/ramroutes/id6749616671',
     googlePlayBadge: googlePlayBadge,
-    googlePlayLink: 'https://play.google.com/store/apps/details?id=com.edgoanalytics.ramroutes',
+    // googlePlayLink: 'https://play.google.com/store/apps/details?id=com.edgoanalytics.ramroutes',
 
     coverImage: coverImage,
 
