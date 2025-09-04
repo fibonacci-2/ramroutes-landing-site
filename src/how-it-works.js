@@ -2,9 +2,10 @@ import React from 'react';
 import { Layout, Row, Col, Typography, Image, Button } from 'antd';
 import { motion } from 'framer-motion';
 import { colors, PRIMARY_COLOR, SECONDARY_COLOR } from './config/colors';
+import Header from './components/Header';
 
 // Import placeholder images - you'll need to replace these with actual screenshots
-import registerImage from './images/app_4.png';  // Replace with register screenshot
+import registerImage from './images/joining-new.PNG';  // Replace with register screenshot
 import unlockImage from './images/app_2.png';    // Replace with unlock screenshot
 import engageImage from './images/app_3.png';    // Replace with engage screenshot
 
@@ -12,9 +13,12 @@ const { Title, Paragraph } = Typography;
 
 function HowItWorks() {
   return (
-    <div style={{ backgroundColor: 'white', minHeight: '100vh', padding: '50px 20px' }}>
-      <Row justify='center'>
-        <Col xs={24} sm={20} md={16} lg={14} xl={12}>
+    <Layout style={{ minHeight: '100vh' }}>
+      <Header />
+      <Layout.Content>
+        <div style={{ backgroundColor: 'white', minHeight: '100vh', padding: '50px 20px' }}>
+          <Row justify='center'>
+            <Col xs={24} sm={20} md={16} lg={14} xl={12}>
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: -50 }}
@@ -22,7 +26,7 @@ function HowItWorks() {
             transition={{ duration: 0.8 }}
           >
             <Row justify='center' style={{ marginBottom: '60px' }}>
-              <Title level={1} style={{ color: PRIMARY_COLOR, textAlign: 'center' }}>
+              <Title level={1} style={{ color: SECONDARY_COLOR, textAlign: 'center' }}>
                 How RamRoutes Works
               </Title>
               <Paragraph style={{ fontSize: '18px', textAlign: 'center', color: '#666' }}>
@@ -44,10 +48,10 @@ function HowItWorks() {
                   backgroundColor: '#f0f8ff', 
                   padding: '40px', 
                   borderRadius: '15px',
-                  border: '2px solid ' + PRIMARY_COLOR
+                  border: '2px solid ' + SECONDARY_COLOR
                 }}>
                   <div style={{ 
-                    backgroundColor: PRIMARY_COLOR, 
+                    backgroundColor: SECONDARY_COLOR, 
                     color: 'white', 
                     width: '40px', 
                     height: '40px', 
@@ -61,7 +65,7 @@ function HowItWorks() {
                   }}>
                     1
                   </div>
-                                    <Title level={3} style={{ color: '#2E3652', marginBottom: '15px' }}>
+                                    <Title level={3} style={{ color: SECONDARY_COLOR, marginBottom: '15px' }}>
                     Step 1: Sign Up with Cornell Email
                   </Title>
                   <Paragraph style={{ fontSize: '16px', color: '#333' }}>
@@ -132,7 +136,7 @@ function HowItWorks() {
                   }}>
                     2
                   </div>
-                                    <Title level={3} style={{ color: '#2E3652', marginBottom: '15px' }}>
+                                    <Title level={3} style={{ color: SECONDARY_COLOR, marginBottom: '15px' }}>
                     Step 2: Explore & Unlock Buildings
                   </Title>
                   <Paragraph style={{ fontSize: '16px', color: '#333' }}>
@@ -156,10 +160,10 @@ function HowItWorks() {
                   backgroundColor: '#f9f0ff', 
                   padding: '40px', 
                   borderRadius: '15px',
-                  border: '2px solid ' + PRIMARY_COLOR
+                  border: '2px solid ' + SECONDARY_COLOR
                 }}>
                   <div style={{ 
-                    backgroundColor: PRIMARY_COLOR, 
+                    backgroundColor: SECONDARY_COLOR, 
                     color: 'white', 
                     width: '40px', 
                     height: '40px', 
@@ -173,7 +177,7 @@ function HowItWorks() {
                   }}>
                     3
                   </div>
-                                    <Title level={3} style={{ color: PRIMARY_COLOR, marginBottom: '15px' }}>
+                                    <Title level={3} style={{ color: SECONDARY_COLOR, marginBottom: '15px' }}>
                     Step 3: Share with the Community
                   </Title>
                   <Paragraph style={{ fontSize: '16px', color: '#333' }}>
@@ -214,7 +218,7 @@ function HowItWorks() {
                 borderRadius: '20px',
                 border: '1px solid #e8e8e8'
               }}>
-                                <Title level={2} style={{ color: PRIMARY_COLOR, marginBottom: '20px' }}>
+                                <Title level={2} style={{ color: SECONDARY_COLOR, marginBottom: '20px' }}>
                   Get Started Today!
                 </Title>
                 <Paragraph style={{ fontSize: '16px', color: '#666', marginBottom: '30px' }}>
@@ -223,9 +227,11 @@ function HowItWorks() {
               </div>
             </Row>
           </motion.div>
-        </Col>
-      </Row>
-    </div>
+            </Col>
+          </Row>
+        </div>
+      </Layout.Content>
+    </Layout>
   );
 }
 

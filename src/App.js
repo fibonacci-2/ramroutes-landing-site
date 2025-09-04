@@ -7,6 +7,7 @@ import Mobile from './Mobile'
 import Cookies from './policy/cookies'
 import Privacy from './policy/privacy'
 import Terms from './policy/terms'
+import TermsOfUse from './policy/terms-of-use'
 import WhoWeAre from './policy/who-we-are'
 import HowItWorks from './how-it-works'
 import Admin from './pages/Admin'
@@ -31,6 +32,7 @@ function RouteElementsDesktop() {
     { path: '/policy/cookies', element: <Cookies /> },
     { path: '/policy/privacy', element: <Privacy /> },
     // { path: '/policy/terms', element: <Terms /> },
+    { path: '/policy/terms-of-use', element: <TermsOfUse /> },
     { path: '/who-we-are', element: <WhoWeAre /> },
     { path: '/how-it-works', element: <HowItWorks /> },
     { path: '/admin', element: <Admin /> },
@@ -44,6 +46,7 @@ function RouteElementsMobile() {
     { path: '/policy/cookies', element: <Cookies /> },
     { path: '/policy/privacy', element: <Privacy /> },
     // { path: '/policy/terms', element: <Terms /> },
+    { path: '/policy/terms-of-use', element: <TermsOfUse /> },
     { path: '/who-we-are', element: <WhoWeAre /> },
     { path: '/how-it-works', element: <HowItWorks /> },
     { path: '/admin', element: <Admin /> },

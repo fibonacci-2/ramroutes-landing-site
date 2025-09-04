@@ -4,6 +4,7 @@ import { ArrowLeftOutlined, UserOutlined, TeamOutlined, LockOutlined } from '@an
 import { useNavigate } from 'react-router-dom';
 import AdminRequests from '../components/AdminRequests';
 import { firestoreService } from '../config/firestoreService';
+import { SECONDARY_COLOR } from '../config/colors';
 
 const { Header, Content } = Layout;
 const { Title } = Typography;
@@ -69,7 +70,7 @@ const Admin = () => {
       <Layout style={{ minHeight: '100vh', backgroundColor: '#f5f5f5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <Card style={{ width: 400, textAlign: 'center' }}>
           <Space direction="vertical" size="large" style={{ width: '100%' }}>
-            <LockOutlined style={{ fontSize: '48px', color: '#1890ff' }} />
+            <LockOutlined style={{ fontSize: '48px', color: SECONDARY_COLOR }} />
             <Title level={3}>Admin Access Required</Title>
             <Typography.Text type="secondary">
               Please enter the admin password to access the admin panel.
@@ -124,7 +125,7 @@ const Admin = () => {
           >
             Back to Home
           </Button>
-          <Title level={3} style={{ margin: 0, color: '#1890ff' }}>
+          <Title level={3} style={{ margin: 0, color: SECONDARY_COLOR }}>
             RamRoutes Admin Panel
           </Title>
         </Space>

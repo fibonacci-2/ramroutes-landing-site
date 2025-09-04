@@ -1,11 +1,15 @@
-import { Typography, Row, Col } from 'antd'
+import { Typography, Row, Col, Layout } from 'antd'
+import Header from '../components/Header'
 
 function Privacy() {
     console.log('Rendering Privacy Policy Page')
   return (
-    <Typography component='div' style={{'height': '100vh', 'overflow': 'auto'}}>
-        <Row type='flex' justify='center' style={{'margin': '20px'}}>
-            <Col span={20}>
+    <Layout style={{ minHeight: '100vh' }}>
+      <Header />
+      <Layout.Content style={{ padding: '20px 0' }}>
+        <Typography component='div' style={{ overflow: 'auto' }}>
+            <Row type='flex' justify='center' style={{ margin: '20px' }}>
+                <Col span={20}>
                 <Typography.Title level={2}>
                     PRIVACY POLICY
                 </Typography.Title>
@@ -114,12 +118,14 @@ function Privacy() {
                 </Typography.Title>
 
                 <Typography.Paragraph>
-                    For questions or concerns, please contact us at <a href='mailto:gosaadmakhal@gmail.com' style={{'color': 'blue'}}>gosaadmakhal@gmail.com</a>.
+                    For questions or concerns about our privacy policy, please visit our <a href='/policy/terms-of-use' style={{'color': 'blue'}}>Terms of Use / Support</a> page and use our contact form.
                 </Typography.Paragraph>
 
-            </Col>
-        </Row>
-    </Typography>
+                </Col>
+            </Row>
+        </Typography>
+      </Layout.Content>
+    </Layout>
   )
 }
 

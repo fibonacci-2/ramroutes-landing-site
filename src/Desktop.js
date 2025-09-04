@@ -28,6 +28,7 @@ import {
 } from 'react'
 
 import { Context } from './store/Context'
+import { SECONDARY_COLOR } from './config/colors'
 import AndroidForm from './components/AndroidForm'
 
 // props: image
@@ -132,7 +133,7 @@ function Desktop() {
                             <Col style={{'cursor': 'pointer'}} onClick={() => { window.scrollTo(0, 0)}}>
                                 <Row justify='center' align='middle'>
                                     <Col>
-                                        <Image height={30} width={30} preview={false} src={state.appLogo}></Image>
+                                        <Image height={30} width={30} preview={false} src={state.appLogo} style={{'padding': '2px'}}></Image>
                                     </Col>
                                     <Col>
                                         <Typography.Title level={3} style={{'color': 'black', 'marginLeft': '10px', 'margin': 0}}>{state.appName}</Typography.Title>
@@ -143,22 +144,22 @@ function Desktop() {
                                 {/* Desktop Menu - Hidden on mobile */}
                                 <Row gutter={32} align='middle' style={{display: 'none'}} className="desktop-menu">
                                     <Col>
-                                        <a href={state.appURL + '/how-it-works'} target='_blank' rel="noopener noreferrer">
-                                            <Typography.Text style={{'fontSize': '16px', 'color': '#1890ff', 'fontWeight': '500'}}>
+                                        <a href={state.appURL + '/how-it-works'} rel="noopener noreferrer">
+                                            <Typography.Text style={{'fontSize': '16px', 'color': SECONDARY_COLOR, 'fontWeight': '500'}}>
                                                 How It Works
                                             </Typography.Text>
                                         </a>
                                     </Col>
                                     <Col>
-                                        <a href={state.appURL + '/who-we-are'} target='_blank' rel="noopener noreferrer">
-                                            <Typography.Text style={{'fontSize': '16px', 'color': '#1890ff', 'fontWeight': '500'}}>
+                                        <a href={state.appURL + '/who-we-are'} rel="noopener noreferrer">
+                                            <Typography.Text style={{'fontSize': '16px', 'color': SECONDARY_COLOR, 'fontWeight': '500'}}>
                                                 Our Story
                                             </Typography.Text>
                                         </a>
                                     </Col>
                                     <Col>
-                                        <a href={state.appURL + '/policy/privacy'} target='_blank' rel="noopener noreferrer">
-                                            <Typography.Text style={{'fontSize': '16px', 'color': '#1890ff', 'fontWeight': '500'}}>
+                                        <a href={state.appURL + '/policy/privacy'} rel="noopener noreferrer">
+                                            <Typography.Text style={{'fontSize': '16px', 'color': SECONDARY_COLOR, 'fontWeight': '500'}}>
                                                 Privacy Policy
                                             </Typography.Text>
                                         </a>
@@ -201,7 +202,7 @@ function Desktop() {
                                 state.appleStoreLink &&
                                 <Col style={{'width': '200px', 'marginRight': '20px'}}>
                                     <Row justify='center' style={{ marginBottom: '10px' }}>
-                                        <Typography.Title level={4} style={{ color: '#1890ff', margin: 0 }}>
+                                        <Typography.Title level={4} style={{ color: SECONDARY_COLOR, margin: 0 }}>
                                             iOS
                                         </Typography.Title>
                                     </Row>
@@ -234,8 +235,8 @@ function Desktop() {
                                         size="large"
                                         onClick={() => setAndroidFormVisible(true)}
                                         style={{ 
-                                            backgroundColor: '#52c41a', 
-                                            borderColor: '#52c41a', 
+                                            backgroundColor: SECONDARY_COLOR, 
+                                            borderColor: SECONDARY_COLOR, 
                                             fontSize: '14px',
                                             width: '180px',
                                             height: '60px',
@@ -264,107 +265,46 @@ function Desktop() {
                     <Row justify='center' style={{'maxWidth': '1200px', 'width': '100%'}}>
                         <Col span={24}>
                             <Row justify='center' style={{ marginBottom: '80px' }}>
-                                <Typography.Title level={1} style={{ color: '#1890ff', textAlign: 'center' }}>
-                                    Why Get RamRoutes?
+                                <Typography.Title level={1} style={{ color: SECONDARY_COLOR, textAlign: 'center' }}>
+                                    {state.featuresSection.title}
                                 </Typography.Title>
                             </Row>
                             
                             <Row gutter={[48, 48]} justify='center'>
-                                <Col xs={24} sm={8}>
-                                    <motion.div
-                                        initial={{y: 50, opacity: 0}} 
-                                        whileInView={{y: 0, opacity: 1, transition: {duration: 0.6, delay: 0.1}}} 
-                                        viewport={{once: true}}
-                                    >
-                                        <Row justify='center' style={{ marginBottom: '20px' }}>
-                                            <div style={{ 
-                                                width: '80px', 
-                                                height: '80px', 
-                                                borderRadius: '50%', 
-                                                backgroundColor: '#52c41a', 
-                                                display: 'flex', 
-                                                alignItems: 'center', 
-                                                justifyContent: 'center' 
-                                            }}>
-                                                <Typography.Text style={{ fontSize: '32px', color: 'white' }}>🗺️</Typography.Text>
-                                            </div>
-                                        </Row>
-                                        <Row justify='center' style={{ marginBottom: '15px' }}>
-                                            <Typography.Title level={3} style={{ textAlign: 'center', margin: 0 }}>
-                                                Explore Campus
-                                            </Typography.Title>
-                                        </Row>
-                                        <Row justify='center'>
-                                            <Typography.Text style={{ fontSize: '16px', textAlign: 'center', color: '#666' }}>
-                                        Reunite the Ram with his lover, Aros in a journey of discovery and enlightenment
-                                            </Typography.Text>
-                                        </Row>
-                                    </motion.div>
-                                </Col>
-                                
-                                <Col xs={24} sm={8}>
-                                    <motion.div
-                                        initial={{y: 50, opacity: 0}} 
-                                        whileInView={{y: 0, opacity: 1, transition: {duration: 0.6, delay: 0.2}}} 
-                                        viewport={{once: true}}
-                                    >
-                                        <Row justify='center' style={{ marginBottom: '20px' }}>
-                                            <div style={{ 
-                                                width: '80px', 
-                                                height: '80px', 
-                                                borderRadius: '50%', 
-                                                backgroundColor: '#1890ff', 
-                                                display: 'flex', 
-                                                alignItems: 'center', 
-                                                justifyContent: 'center' 
-                                            }}>
-                                                <Typography.Text style={{ fontSize: '32px', color: 'white' }}>🤝</Typography.Text>
-                                            </div>
-                                        </Row>
-                                        <Row justify='center' style={{ marginBottom: '15px' }}>
-                                            <Typography.Title level={3} style={{ textAlign: 'center', margin: 0 }}>
-                                                Connect with Rams
-                                            </Typography.Title>
-                                        </Row>
-                                        <Row justify='center'>
-                                            <Typography.Text style={{ fontSize: '16px', textAlign: 'center', color: '#666' }}>
-                                                Keep up with other rams exploring campus.
-                                            </Typography.Text>
-                                        </Row>
-                                    </motion.div>
-                                </Col>
-                                
-                                <Col xs={24} sm={8}>
-                                    <motion.div
-                                        initial={{y: 50, opacity: 0}} 
-                                        whileInView={{y: 0, opacity: 1, transition: {duration: 0.6, delay: 0.3}}} 
-                                        viewport={{once: true}}
-                                    >
-                                        <Row justify='center' style={{ marginBottom: '20px' }}>
-                                            <div style={{ 
-                                                width: '80px', 
-                                                height: '80px', 
-                                                borderRadius: '50%', 
-                                                backgroundColor: '#722ed1', 
-                                                display: 'flex', 
-                                                alignItems: 'center', 
-                                                justifyContent: 'center' 
-                                            }}>
-                                                <Typography.Text style={{ fontSize: '32px', color: 'white' }}>📅</Typography.Text>
-                                            </div>
-                                        </Row>
-                                        <Row justify='center' style={{ marginBottom: '15px' }}>
-                                            <Typography.Title level={3} style={{ textAlign: 'center', margin: 0 }}>
-                                                Campus Events
-                                            </Typography.Title>
-                                        </Row>
-                                        <Row justify='center'>
-                                            <Typography.Text style={{ fontSize: '16px', textAlign: 'center', color: '#666' }}>
-                                                Stay up-to-date with campus events in real time
-                                            </Typography.Text>
-                                        </Row>
-                                    </motion.div>
-                                </Col>
+                                {state.featuresSection.features.map((feature, index) => (
+                                    <Col xs={24} sm={8} key={index}>
+                                        <motion.div
+                                            initial={{y: 50, opacity: 0}} 
+                                            whileInView={{y: 0, opacity: 1, transition: {duration: 0.6, delay: 0.1 + index * 0.1}}} 
+                                            viewport={{once: true}}
+                                        >
+                                            <Row justify='center' style={{ marginBottom: '20px' }}>
+                                                <div style={{ 
+                                                    width: '80px', 
+                                                    height: '80px', 
+                                                    borderRadius: '50%', 
+                                                    backgroundColor: feature.backgroundColor === '#e6f3ff' ? SECONDARY_COLOR : 
+                                                                    feature.backgroundColor === '#f0f8e6' ? '#52c41a' : '#722ed1', 
+                                                    display: 'flex', 
+                                                    alignItems: 'center', 
+                                                    justifyContent: 'center' 
+                                                }}>
+                                                    <Typography.Text style={{ fontSize: '32px', color: 'white' }}>{feature.icon}</Typography.Text>
+                                                </div>
+                                            </Row>
+                                            <Row justify='center' style={{ marginBottom: '15px' }}>
+                                                <Typography.Title level={3} style={{ textAlign: 'center', margin: 0 }}>
+                                                    {feature.title}
+                                                </Typography.Title>
+                                            </Row>
+                                            <Row justify='center'>
+                                                <Typography.Text style={{ fontSize: '16px', textAlign: 'center', color: '#666' }}>
+                                                    {feature.description}
+                                                </Typography.Text>
+                                            </Row>
+                                        </motion.div>
+                                    </Col>
+                                ))}
                             </Row>
                         </Col>
                     </Row>
@@ -400,23 +340,30 @@ function Desktop() {
 
                     <Col style={{'padding': '0px 20px'}}>
                         <Row justify='start' align='middle'>
-                        <a href={state.appURL + '/how-it-works'} target='_blank' rel="noopener noreferrer">
+                        <a href={state.appURL + '/how-it-works'} rel="noopener noreferrer">
                             <Typography.Title level={5}>
                                 How It Works
                             </Typography.Title>
                         </a>
                         </Row>
                         <Row justify='start' align='middle'>
-                        <a href={state.appURL + '/who-we-are'} target='_blank' rel="noopener noreferrer">
+                        <a href={state.appURL + '/who-we-are'} rel="noopener noreferrer">
                             <Typography.Title level={5}>
                                 Our Story
                             </Typography.Title>
                         </a>
                         </Row>
                         <Row justify='start' align='middle'>
-                        <a href={state.appURL + '/policy/privacy'} target='_blank' rel="noopener noreferrer">
+                        <a href={state.appURL + '/policy/privacy'} rel="noopener noreferrer">
                             <Typography.Title  level={5}>
                                 Privacy Policy
+                            </Typography.Title>
+                        </a>
+                        </Row>
+                        <Row justify='start' align='middle'>
+                        <a href={state.appURL + '/policy/terms-of-use'} rel="noopener noreferrer">
+                            <Typography.Title  level={5}>
+                                Terms of Use
                             </Typography.Title>
                         </a>
                         </Row>
@@ -478,22 +425,22 @@ function Desktop() {
             >
                 <Menu mode="vertical" style={{border: 'none'}}>
                     <Menu.Item key="how-it-works">
-                        <a href={state.appURL + '/how-it-works'} target='_blank' rel="noopener noreferrer" onClick={() => setDrawerVisible(false)}>
-                            <Typography.Text style={{'fontSize': '16px', 'color': '#1890ff', 'fontWeight': '500'}}>
+                        <a href={state.appURL + '/how-it-works'} rel="noopener noreferrer" onClick={() => setDrawerVisible(false)}>
+                            <Typography.Text style={{'fontSize': '16px', 'color': SECONDARY_COLOR, 'fontWeight': '500'}}>
                                 How It Works
                             </Typography.Text>
                         </a>
                     </Menu.Item>
                     <Menu.Item key="our-story">
-                        <a href={state.appURL + '/who-we-are'} target='_blank' rel="noopener noreferrer" onClick={() => setDrawerVisible(false)}>
-                            <Typography.Text style={{'fontSize': '16px', 'color': '#1890ff', 'fontWeight': '500'}}>
+                        <a href={state.appURL + '/who-we-are'} rel="noopener noreferrer" onClick={() => setDrawerVisible(false)}>
+                            <Typography.Text style={{'fontSize': '16px', 'color': SECONDARY_COLOR, 'fontWeight': '500'}}>
                                 Our Story
                             </Typography.Text>
                         </a>
                     </Menu.Item>
                     <Menu.Item key="privacy">
-                        <a href={state.appURL + '/policy/privacy'} target='_blank' rel="noopener noreferrer" onClick={() => setDrawerVisible(false)}>
-                            <Typography.Text style={{'fontSize': '16px', 'color': '#1890ff', 'fontWeight': '500'}}>
+                        <a href={state.appURL + '/policy/privacy'} rel="noopener noreferrer" onClick={() => setDrawerVisible(false)}>
+                            <Typography.Text style={{'fontSize': '16px', 'color': SECONDARY_COLOR, 'fontWeight': '500'}}>
                                 Privacy Policy
                             </Typography.Text>
                         </a>
