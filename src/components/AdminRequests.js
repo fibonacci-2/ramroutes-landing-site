@@ -18,16 +18,21 @@ const AdminRequests = ({ isPage = false, onStatsUpdate = null }) => {
   const loadRequests = async () => {
     setLoading(true);
     try {
+      console.log('Loading requests from Firestore...');
+      
       const [androidFirestoreData, teamFirestoreData] = await Promise.all([
         androidRequestsService.getAll(true), // Admin mode enabled
         teamApplicationsService.getAll(true)  // Admin mode enabled
       ]);
       
+      console.log('Android requests loaded:', androidFirestoreData);
+      console.log('Team/Contact forms loaded:', teamFirestoreData);
+      
       setAndroidRequests(androidFirestoreData);
       setTeamRequests(teamFirestoreData);
 
       if (!isPage) {
-        message.success('Data loaded successfully');
+        message.success(`Data loaded successfully: ${androidFirestoreData.length} Android requests, ${teamFirestoreData.length} contact forms`);
       }
       
       // Notify parent component of stats update
@@ -36,7 +41,7 @@ const AdminRequests = ({ isPage = false, onStatsUpdate = null }) => {
       }
     } catch (error) {
       console.error('Error loading from Firestore:', error);
-      message.error('Failed to load data from Firestore. Please check your connection.');
+      message.error('Failed to load data from Firestore. Please check your connection and Firebase configuration.');
       setAndroidRequests([]);
       setTeamRequests([]);
     } finally {

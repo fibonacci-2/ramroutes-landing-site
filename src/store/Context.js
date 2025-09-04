@@ -17,8 +17,8 @@ export const initialState = {
     appLogo: appLogo,
     appName: 'RamRoutes',
 
-    coverTitle: 'Discover the Magic of Campus',
-    coverText: 'Join RamRoutes and connect with your campus community!',
+    coverTitle: 'Discover the Magic of Cornell Campus',
+    // coverText: 'Adventure awaits!',
     appleStoreBadge: appleStoreBadge,
     appleStoreLink: 'https://apps.apple.com/us/app/ramroutes/id6749616671',
     googlePlayBadge: googlePlayBadge,

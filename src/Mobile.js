@@ -28,6 +28,7 @@ import {
 import { Context } from './store/Context'
 import { SECONDARY_COLOR } from './config/colors'
 import AndroidForm from './components/AndroidForm'
+import ContactForm from './components/ContactForm'
 
 // props: sectionItem, backgroundColor
 function SectionItem(props) {
@@ -116,8 +117,8 @@ function Mobile() {
 
             <Layout.Content>
                 {/* cover headline */}
-                <Row justify='center' align='middle' style={{'backgroundColor': 'white', 'height': '800px', 'paddingTop': '50px'}}>
-                    <Row justify='center' padding='20px'>
+                <Row justify='center' align='middle' style={{'backgroundColor': 'white', 'height': '800px', 'paddingTop': '50px', 'paddingLeft': '20px', 'paddingRight': '20px'}}>
+                    <Row justify='center'>
                         <Typography.Title level={2}>
                             {state.coverTitle}
                         </Typography.Title>
@@ -159,7 +160,7 @@ function Mobile() {
                             </Row>
                             <Row justify='center' style={{ marginBottom: '10px' }}>
                                 <Typography.Text style={{ fontSize: '14px', textAlign: 'center' }}>
-                                    You need to request access to the Android app
+                                    Request access to the Android app
                                 </Typography.Text>
                             </Row>
                             <Row justify='center'>
@@ -186,7 +187,17 @@ function Mobile() {
                     </Row>
 
                     <Row justify='center'>
-                        <Image preview={false} src={state.coverImage} style={{'width': '100%'}}></Image>
+                        <div style={{ margin: '20px' }}>
+                            <Image 
+                                preview={false} 
+                                src={state.coverImage} 
+                                style={{
+                                    width: '100%',
+                                    borderRadius: '8px',
+                                    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)'
+                                }}
+                            />
+                        </div>
                     </Row>
                 </Row>
 
@@ -244,15 +255,15 @@ function Mobile() {
                
 
                 {/* section list */}
-                <SectionList sectionList={state.sectionList} />
+                {/* <SectionList sectionList={state.sectionList} /> */}
 
                 {/* policies */}
-                <Row justify='center' align='top' style={{'backgroundColor': 'white', 'height': '450px', 'padding': '70px 20px'}}>
+                {/* <Row justify='center' align='top' style={{'backgroundColor': 'white', 'height': '450px', 'padding': '70px 20px'}}> */}
 {/*                 
                     <Row justify='center' align='top' style={{'width': '100%'}}>
                         <Button type="primary" shape="round" icon={<DownloadOutlined />} size='large' danger onClick={() => { window.scrollTo(0, 0)}}>Download</Button>
                     </Row> */}
-
+{/* 
                     <Row justify='space-around' align='top' style={{'width': '100%','marginTop': '100px'}}>
                         <Col>
                             <Row justify='start' align='middle'>
@@ -284,48 +295,18 @@ function Mobile() {
                             </a>
                             </Row>
                         </Col>
+                    </Row> */}
 
-
-                        <Col >
-                            {/* <Row justify='start' align='middle'>
-                                <Typography>
-                                    Need help?
-                                </Typography>
-                            </Row> */}
-                            {/* <Row justify='start' align='middle' style={{'cursor': 'pointer', 'marginTop': '20px'}}>
-                                <Popover placement='top' title='Contact Us' content={
-                                    <a href={state.discordLink} target='_blank' rel="noopener noreferrer">
-                                        <Row justify='start' align='middle'>
-                                            <Col>
-                                                <Image width={40} height={40} preview={false} src={state.discordImage}></Image>
-                                            </Col>
-                                            <Col style={{'marginLeft': '5px'}}>
-                                                <Typography>Join our Discord</Typography>  
-                                            </Col>
-                                        </Row>
-
-                                    </a>
-                                } trigger='click'>
-                                    <Typography.Title level={5} style={{'margin': '0px'}}>
-                                        Contact Us
-                                    </Typography.Title>
-                                </Popover>
-                            </Row> */}
-                            
-                        </Col>
-
-                    </Row>
-
-                </Row>
-                
-
-                <Row justify="center" align='middle' style={{'backgroundColor': 'white', 'padding': '0 0 40px 0'}}>
-                    <Col>
-                        <Typography.Text type="secondary" style={{'fontSize': 12}}>
-                            {state.appName} © {new Date().getFullYear()}
-                        </Typography.Text>
+                {/* </Row> */}
+                <Row justify='center' align='top' style={{'backgroundColor': 'white', 'height': '450px', 'padding': '70px 20px'}}>
+                    <Col span={24}>
+                        <Row justify='center' style={{ marginBottom: '40px' }}>
+                                        <ContactForm title="Get in Touch with RamRoutes Support" isMobile={true} />
+                        </Row>
                     </Col>
                 </Row>
+
+               
 
             </Layout.Content>
 
@@ -376,6 +357,7 @@ function Mobile() {
                     </Menu.Item>
                 </Menu>
             </Drawer>
+            
         </>
     )
 }

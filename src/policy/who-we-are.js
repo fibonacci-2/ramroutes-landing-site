@@ -19,24 +19,24 @@ function WhoWeAre() {
                     Last updated: September 1, 2025
                 </Typography.Paragraph>
 
-                <Typography.Title level={3}>
+                {/* <Typography.Title level={3}>
                     Our Vision
                 </Typography.Title>
 
                 <Typography.Paragraph>
                     At RamRoutes, we believe that every corner of Cornell College holds a story worth discovering. Our campus exploration game transforms the traditional campus tour into an interactive adventure that encourages students, visitors, and community members to engage with our beautiful historic campus in a completely new way.
-                </Typography.Paragraph>
+                </Typography.Paragraph> */}
 
                 <Typography.Title level={3}>
                     How It All Started
                 </Typography.Title>
 
                 <Typography.Paragraph>
-                    RamRoutes was born from a simple observation: many students graduate without fully exploring their own campus. We wanted to change that by creating something that would motivate people to step outside their comfort zones and discover the hidden gems that make Cornell College special.
+RamRoutes was born from the shared vision of two recent Cornell College graduates who recognized a common challenge across college campuses: student disconnection from their physical environment. During our time at Cornell College, we observed that many students, despite spending four years on campus, never fully explored or engaged with the rich history, hidden gems, and unique spaces that make our campus special.
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    Our team of student developers and campus enthusiasts came together with a shared passion for both technology and the rich history of Cornell College. We saw an opportunity to blend modern mobile gaming with the timeless appeal of exploration and discovery.
+In our final year at college, we decided to use both our skill sets to collaborate on our capstone project. We managed to create a pixel art platformer video game. One that gamifies education about two prominent topics of climate change: waste management and community disaster relief. Two significant problems to tackle that specifically require community engagement. Ramroutes: Trials of Venus was the predecessor for RamRoutes: discover the magic of campus. What better way to engage a community than creating a space of play and updated information directly from all parts of the community? In this space, players can enjoy an intriguing love story then find out what’s happening at specific buildings on campus like club events, Greek life, holidays, and so much more. 
                 </Typography.Paragraph>
 
                 <Typography.Title level={3}>
@@ -64,18 +64,8 @@ function WhoWeAre() {
                     </Typography.Paragraph>
                 </Typography>
 
-                <Typography.Title level={3}>
-                    Why Cornell College?
-                </Typography.Title>
-
-                <Typography.Paragraph>
-                    Cornell College's campus is uniquely suited for an exploration-based game. With its stunning hilltop location, historic architecture, and compact but diverse layout, every building and outdoor space has character and significance. From the iconic King Chapel to the newest academic facilities, there's always something new to discover.
-                </Typography.Paragraph>
-
-                <Typography.Paragraph>
-                    Our game celebrates both the heritage and the ongoing evolution of Cornell College, helping players appreciate the campus as a living, breathing community that has been home to generations of students and scholars.
-                </Typography.Paragraph>
-
+             
+             
                 <Typography.Title level={3}>
                     Looking Forward
                 </Typography.Title>
@@ -84,10 +74,7 @@ function WhoWeAre() {
                     We're constantly working to improve RamRoutes based on player feedback and campus developments. Our roadmap includes new locations, enhanced challenges, seasonal events, and features that will keep the exploration experience fresh and engaging.
                 </Typography.Paragraph>
 
-                <Typography.Paragraph>
-                    We believe that RamRoutes is more than just a game – it's a tool for building lasting connections between people and place. Whether you're a first-year student just getting oriented or an alumnus revisiting your old stomping grounds, RamRoutes offers a unique way to experience Cornell College.
-                </Typography.Paragraph>
-
+              
                 <Typography.Title level={3}>
                     Join Our Community
                 </Typography.Title>
@@ -97,23 +84,7 @@ function WhoWeAre() {
                 </Typography.Paragraph>
 
                 <Typography.Paragraph>
-                    If you're passionate about campus life, mobile technology, game design, or just want to contribute to something that brings our community together, we'd love to hear from you. Visit our <strong>Terms of Use / Support</strong> page to get in touch with our team.
-                </Typography.Paragraph>
-
-                <Typography.Title level={3}>
-                    Thank You
-                </Typography.Title>
-
-                <Typography.Paragraph>
-                    To everyone who has played RamRoutes, provided feedback, or supported our mission – thank you. You're helping us create something special that we hope will enhance the Cornell College experience for years to come.
-                </Typography.Paragraph>
-
-                <Typography.Paragraph>
-                    Happy exploring!
-                </Typography.Paragraph>
-
-                <Typography.Paragraph style={{'fontStyle': 'italic', 'textAlign': 'right', 'marginTop': '40px'}}>
-                    — The RamRoutes Development Team
+                    If you're passionate about campus life, mobile technology, game design, or just want to contribute to something that brings our community together, we'd love to hear from you. Fill in the form below to get in touch!
                 </Typography.Paragraph>
 
                 <ContactForm title="Connect with the RamRoutes Team" />

@@ -6,7 +6,7 @@ import { SECONDARY_COLOR } from '../config/colors'
 const { TextArea } = Input
 const { Option } = Select
 
-const ContactForm = ({ title = "Get in Touch with RamRoutes" }) => {
+const ContactForm = ({ title = "Get in Touch with RamRoutes", isMobile = false }) => {
     const [form] = Form.useForm()
     const [loading, setLoading] = useState(false)
 
@@ -34,17 +34,20 @@ const ContactForm = ({ title = "Get in Touch with RamRoutes" }) => {
     return (
         <div style={{ 
             backgroundColor: '#f8f9fa', 
-            padding: '40px', 
-            borderRadius: '8px', 
+            padding: isMobile ? '20px' : '40px', 
+            borderRadius: '8px',
+            width: '100%', 
+            maxWidth: isMobile ? 'none' : '600px',
+            margin: isMobile ? '20px 0' : '40px auto',
             border: '1px solid #e8e8e8',
-            marginTop: '40px'
+            textAlign: 'center'
         }}>
             <Typography.Title level={3} style={{ marginBottom: '20px', color: SECONDARY_COLOR }}>
                 {title}
             </Typography.Title>
 
             <Typography.Paragraph style={{ marginBottom: 24, color: '#666' }}>
-                Whether you've found a bug, have a feature suggestion, need technical support, or want to contribute to RamRoutes, we're here to help!
+                Whether you've found a bug, have a feature suggestion, need technical support, or want to contribute to RamRoutes, we're here to help! We are looking for people with background in coding and/or game design to help us make the game better.
             </Typography.Paragraph>
 
             <Form
@@ -52,10 +55,10 @@ const ContactForm = ({ title = "Get in Touch with RamRoutes" }) => {
                 layout="vertical"
                 onFinish={onFinish}
                 requiredMark={false}
-                style={{ maxWidth: '600px' }}
+                style={{ width: '100%' }}
             >
-                <Row gutter={16}>
-                    <Col span={12}>
+                <Row gutter={[16, 0]}>
+                    <Col xs={24} sm={isMobile ? 24 : 12}>
                         <Form.Item
                             name="name"
                             label="Your Name"
@@ -64,7 +67,7 @@ const ContactForm = ({ title = "Get in Touch with RamRoutes" }) => {
                             <Input placeholder="Enter your full name" />
                         </Form.Item>
                     </Col>
-                    <Col span={12}>
+                    <Col xs={24} sm={isMobile ? 24 : 12}>
                         <Form.Item
                             name="email"
                             label="Email Address"
@@ -107,18 +110,23 @@ const ContactForm = ({ title = "Get in Touch with RamRoutes" }) => {
                 </Form.Item>
 
                 <Form.Item style={{ marginBottom: 0 }}>
-                    <Row justify="space-between" align="middle">
-                        <Col>
+                    <Row justify={isMobile ? "center" : "space-between"} align="middle" gutter={[16, 16]}>
+                        <Col xs={24} sm={isMobile ? 24 : 12} style={{ textAlign: 'center' }}>
                             <Typography.Text type="secondary" style={{ fontSize: '12px' }}>
                                 We typically respond within 1-2 business days
                             </Typography.Text>
                         </Col>
-                        <Col>
+                        <Col xs={24} sm={isMobile ? 24 : 12} style={{ textAlign: 'center' }}>
                             <Button
                                 type="primary"
                                 htmlType="submit"
                                 loading={loading}
-                                style={{ backgroundColor: SECONDARY_COLOR, borderColor: SECONDARY_COLOR }}
+                                style={{ 
+                                    backgroundColor: SECONDARY_COLOR, 
+                                    borderColor: SECONDARY_COLOR,
+                                    minWidth: '120px',
+                                    width: isMobile ? '100%' : 'auto'
+                                }}
                             >
                                 Send Message
                             </Button>

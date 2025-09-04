@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.3c3d45af.css",
-    "main.js": "/static/js/main.b74f11f7.js",
+    "main.js": "/static/js/main.afe3be50.js",
     "static/js/787.1966b5b1.chunk.js": "/static/js/787.1966b5b1.chunk.js",
-    "static/media/app_3.png": "/static/media/app_3.ea44736b3a86c05f4099.png",
-    "static/media/app_2.png": "/static/media/app_2.64eee154820eb8f111ae.png",
     "static/media/Untitled_Artwork.png": "/static/media/Untitled_Artwork.81e1c55f93f67cf17659.png",
-    "static/media/joining-new.PNG": "/static/media/joining-new.6774a350bb506fd80ea8.PNG",
+    "static/media/unlock-button.PNG": "/static/media/unlock-button.37d5c08203f211bb39b2.PNG",
+    "static/media/in-building-view.PNG": "/static/media/in-building-view.bc503ed453a79c69e866.PNG",
+    "static/media/story.png": "/static/media/story.b2fdd238e1269f9544fb.png",
+    "static/media/leaderboard.png": "/static/media/leaderboard.4705686aae7d3e3f81ec.png",
     "static/media/ram.png": "/static/media/ram.8984458572d0f94bc3dd.png",
+    "static/media/joining-new.png": "/static/media/joining-new.81e8a62647cf4291cb0f.png",
     "static/media/google.png": "/static/media/google.8a9825db1a161cb467cf.png",
     "static/media/apple.png": "/static/media/apple.42e53626190d214e66fc.png",
     "index.html": "/index.html",
     "main.3c3d45af.css.map": "/static/css/main.3c3d45af.css.map",
-    "main.b74f11f7.js.map": "/static/js/main.b74f11f7.js.map",
+    "main.afe3be50.js.map": "/static/js/main.afe3be50.js.map",
     "787.1966b5b1.chunk.js.map": "/static/js/787.1966b5b1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c3d45af.css",
-    "static/js/main.b74f11f7.js"
+    "static/js/main.afe3be50.js"
   ]
 }

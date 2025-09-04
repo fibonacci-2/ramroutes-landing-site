@@ -30,6 +30,7 @@ import {
 import { Context } from './store/Context'
 import { SECONDARY_COLOR } from './config/colors'
 import AndroidForm from './components/AndroidForm'
+import ContactForm from './components/ContactForm'
 
 // props: image
 function FloatImageCol(props) {
@@ -185,7 +186,7 @@ function Desktop() {
                 <Row justify='center' align='middle' style={{'backgroundColor': 'white', 'height': '1000px'}}>
                 <Row justify='center' align='middle' style={{'maxWidth': '2000px'}}>
                     <Col style={{'width': '40%'}}>
-                        <Row justify='center' style={{'padding': '0px 50px'}}>
+                        <Row justify='center' style={{'padding': '50px 50px'}}>
                             <Typography.Title>
                                 {state.coverTitle}
                             </Typography.Title>
@@ -226,7 +227,7 @@ function Desktop() {
                                 </Row>
                                 <Row justify='center' style={{ marginBottom: '10px' }}>
                                     <Typography.Text style={{ fontSize: '14px', textAlign: 'center' }}>
-                                        You need to request access to the Android app
+                                    Request access to the Android app
                                     </Typography.Text>
                                 </Row>
                                 <Row justify='center'>
@@ -313,7 +314,13 @@ function Desktop() {
 
                 {/* endorsement list */}
               
-
+                <Row justify='center' align='middle' style={{'maxWidth': '2000px', 'width': '100%'}}>
+                    <Col span={24}>
+                        <Row justify='center' style={{ marginBottom: '40px' }}>
+                                        <ContactForm title="Get in Touch with RamRoutes Support" isMobile={false} />
+                        </Row>
+                    </Col>
+                </Row>
                 {/* section list */}
                 <SectionList sectionList={state.sectionList} />
 

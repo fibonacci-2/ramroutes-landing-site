@@ -48,34 +48,11 @@ const TermsOfUse = () => {
                             • Internet connection for initial setup and updates
                         </Typography.Paragraph>
                         <Typography.Paragraph>
-                            • Physical presence on or near Cornell College campus
+                            • Physical presence on or near Cornell College buildings that require GPS to unlock (Only Cole Library for now)
                         </Typography.Paragraph>
                     </Typography>
 
-                    <Typography.Title level={3}>
-                        How to Play
-                    </Typography.Title>
-
-                    <Typography.Paragraph>
-                        1. <strong>Enable Location Services:</strong> Make sure your device's GPS is turned on and grant location permissions to RamRoutes.
-                    </Typography.Paragraph>
-                    
-                    <Typography.Paragraph>
-                        2. <strong>Start Exploring:</strong> Walk around Cornell College campus to different buildings and outdoor areas.
-                    </Typography.Paragraph>
-                    
-                    <Typography.Paragraph>
-                        3. <strong>Unlock Locations:</strong> When you get close to a significant campus location, it will automatically unlock in your game.
-                    </Typography.Paragraph>
-                    
-                    <Typography.Paragraph>
-                        4. <strong>Complete Challenges:</strong> Each location may have unique challenges, trivia, or information to discover.
-                    </Typography.Paragraph>
-                    
-                    <Typography.Paragraph>
-                        5. <strong>Collect Progress:</strong> Track your exploration progress and see how many campus locations you've discovered.
-                    </Typography.Paragraph>
-
+            
                     <Typography.Title level={3}>
                         Troubleshooting
                     </Typography.Title>
@@ -106,16 +83,16 @@ const TermsOfUse = () => {
                             • Make sure you're close enough to the building or landmark (within ~50 meters)
                         </Typography.Paragraph>
                         <Typography.Paragraph>
-                            • Some locations may require you to be at specific entrance points
-                        </Typography.Paragraph>
-                        <Typography.Paragraph>
-                            • Wait a few moments at each location for GPS to stabilize
+                            • Go to your app settings and make sure RamRoutes has permission to access your location
                         </Typography.Paragraph>
                     </Typography>
 
                     <Typography.Paragraph>
                         <strong>App crashes or performance issues:</strong>
                     </Typography.Paragraph>
+                      <Typography.Paragraph>
+                           RamRoutes is designed to be very light weight in terms of processing power and memory use. However, if you experience crashes or slow performance, try the following:
+                        </Typography.Paragraph>
                     <Typography component='div' style={{'marginLeft': '20px'}}>
                         <Typography.Paragraph>
                             • Make sure you have the latest version of the app
@@ -139,15 +116,6 @@ const TermsOfUse = () => {
                         By using RamRoutes, you agree to:
                     </Typography.Paragraph>
                     <Typography component='div' style={{'marginLeft': '20px'}}>
-                        <Typography.Paragraph>
-                            • Use the app responsibly and follow all campus rules and regulations
-                        </Typography.Paragraph>
-                        <Typography.Paragraph>
-                            • Respect private areas and do not trespass while playing
-                        </Typography.Paragraph>
-                        <Typography.Paragraph>
-                            • Be aware of your surroundings and prioritize safety over gameplay
-                        </Typography.Paragraph>
                         <Typography.Paragraph>
                             • Not attempt to hack, modify, or reverse engineer the app
                         </Typography.Paragraph>
