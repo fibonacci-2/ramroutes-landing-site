@@ -19,20 +19,20 @@ const Header = () => {
             <Affix offsetTop={0}>
                 <Layout.Header style={{ background: 'white', height: '70px' }}>
                     <Row justify='center' align='middle' style={{ backgroundColor: 'white', height: '100%' }}>
-                        <Row justify='space-between' align='middle' style={{ maxWidth: '2000px', width: '100%', height: '100%', backgroundColor: 'white', padding: '0 50px' }}>
-                            <Col style={{ cursor: 'pointer' }} onClick={handleLogoClick}>
-                                <Row justify='center' align='middle'>
+                        <Row justify='space-between' align='middle' style={{ maxWidth: '2000px', width: '100%', height: '100%', backgroundColor: 'white', padding: '0 20px', flexWrap: 'nowrap' }}>
+                            <Col style={{ cursor: 'pointer', flex: '1 1 auto' }} onClick={handleLogoClick}>
+                                <Row justify='center' align='middle' wrap={false}>
                                     <Col>
                                         <Image height={30} width={30} preview={false} src={state.appLogo} style={{ padding: '2px' }} />
                                     </Col>
-                                    <Col>
-                                        <Typography.Title level={3} style={{ color: 'black', marginLeft: '10px', margin: 0 }}>
+                                    <Col style={{ marginTop: '4px', maxWidth: '70vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                        <Typography.Title level={3} style={{ color: 'black', marginLeft: '10px', margin: 0, whiteSpace: 'nowrap' }}>
                                             {state.appName}
                                         </Typography.Title>
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col>
+                            <Col style={{ flex: '0 0 auto', marginLeft: '10px' }}>
                                 {/* Desktop Menu - Hidden on mobile */}
                                 <Row gutter={32} align='middle' style={{ display: 'none' }} className="desktop-menu">
                                     <Col>
@@ -63,7 +63,7 @@ const Header = () => {
                                     type="text" 
                                     icon={<MenuOutlined style={{ fontSize: '18px', color: SECONDARY_COLOR }} />} 
                                     onClick={() => setDrawerVisible(true)}
-                                    style={{ display: 'none' }}
+                                    size="large"
                                     className="mobile-menu-button"
                                 />
                             </Col>

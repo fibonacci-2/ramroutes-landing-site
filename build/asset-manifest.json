@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3c3d45af.css",
-    "main.js": "/static/js/main.afe3be50.js",
+    "main.js": "/static/js/main.8f202336.js",
     "static/js/787.1966b5b1.chunk.js": "/static/js/787.1966b5b1.chunk.js",
     "static/media/Untitled_Artwork.png": "/static/media/Untitled_Artwork.81e1c55f93f67cf17659.png",
     "static/media/unlock-button.PNG": "/static/media/unlock-button.37d5c08203f211bb39b2.PNG",
@@ -14,11 +14,11 @@
     "static/media/apple.png": "/static/media/apple.42e53626190d214e66fc.png",
     "index.html": "/index.html",
     "main.3c3d45af.css.map": "/static/css/main.3c3d45af.css.map",
-    "main.afe3be50.js.map": "/static/js/main.afe3be50.js.map",
+    "main.8f202336.js.map": "/static/js/main.8f202336.js.map",
     "787.1966b5b1.chunk.js.map": "/static/js/787.1966b5b1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c3d45af.css",
-    "static/js/main.afe3be50.js"
+    "static/js/main.8f202336.js"
   ]
 }

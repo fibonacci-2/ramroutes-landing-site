@@ -47,7 +47,7 @@ const ContactForm = ({ title = "Get in Touch with RamRoutes", isMobile = false }
             </Typography.Title>
 
             <Typography.Paragraph style={{ marginBottom: 24, color: '#666' }}>
-                Whether you've found a bug, have a feature suggestion, need technical support, or want to contribute to RamRoutes, we're here to help! We are looking for people with background in coding and/or game design to help us make the game better.
+                We are looking for people with background in coding and/or game design to help us make the game better.
             </Typography.Paragraph>
 
             <Form
@@ -103,7 +103,7 @@ const ContactForm = ({ title = "Get in Touch with RamRoutes", isMobile = false }
                 >
                     <TextArea 
                         rows={4}
-                        placeholder="Tell us more about your inquiry. Be as detailed as possible to help us assist you better."
+                        placeholder="Leave us a message"
                         maxLength={1000}
                         showCount
                     />
@@ -111,11 +111,11 @@ const ContactForm = ({ title = "Get in Touch with RamRoutes", isMobile = false }
 
                 <Form.Item style={{ marginBottom: 0 }}>
                     <Row justify={isMobile ? "center" : "space-between"} align="middle" gutter={[16, 16]}>
-                        <Col xs={24} sm={isMobile ? 24 : 12} style={{ textAlign: 'center' }}>
+                        {/* <Col xs={24} sm={isMobile ? 24 : 12} style={{ textAlign: 'center' }}>
                             <Typography.Text type="secondary" style={{ fontSize: '12px' }}>
                                 We typically respond within 1-2 business days
                             </Typography.Text>
-                        </Col>
+                        </Col> */}
                         <Col xs={24} sm={isMobile ? 24 : 12} style={{ textAlign: 'center' }}>
                             <Button
                                 type="primary"

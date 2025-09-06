@@ -38,7 +38,7 @@ function SectionItem(props) {
                     initial={{x: -300, opacity: 0}} 
                     whileInView={{x: 0, opacity: 1, transition: {type: 'spring', bounce: 0, duration: 1}}} 
                     viewport={{once: true}}>
-                <Row justify='center'>
+                <Row justify='center' >
                     <Typography.Title level={2}>
                         {props.sectionItem.title}
                     </Typography.Title>
@@ -89,21 +89,21 @@ function Mobile() {
 
     return (
         <>
-        <Layout style={{'overflow-x': 'hidden'}}>
+        <Layout style={{ overflowX: 'hidden', height: 'auto', minHeight: '100vh' }}>
             <Affix offsetTop={0}>
                 <Layout.Header style={{'background': 'white', 'width': '100%'}}>
-                    <Row justify='space-between' align='middle' style={{'backgroundColor': 'white', 'width': '100%', 'height': '100%', 'padding': '0 20px'}}>
-                        <Col>
-                            <Row align='middle'>
+                    <Row justify='space-between' align='middle' style={{'backgroundColor': 'white', 'width': '100%', 'height': '100%', 'padding': '0 20px', 'flexWrap': 'nowrap'}}>
+                        <Col style={{ flex: '1 1 auto' }}>
+                            <Row align='middle' wrap={false}>
                                 <Col>
                                     <Image width={30} height={30} preview={false} src={state.appLogo} style={{'padding':'2px'}}></Image>
                                 </Col>
-                                <Col>
-                                    <Typography.Title level={3} style={{'color': 'black', 'marginLeft': '10px', 'margin': 0}}>{state.appName}</Typography.Title>
+                                <Col style={{'marginTop': '4px', 'maxWidth': '70vw', 'overflow': 'hidden', 'textOverflow': 'ellipsis'}}>
+                                    <Typography.Title level={3} style={{'color': 'black', 'marginLeft': '10px', 'margin': 0, 'whiteSpace': 'nowrap'}}>{state.appName}</Typography.Title>
                                 </Col>
                             </Row>
                         </Col>
-                        <Col>
+                        <Col style={{ flex: '0 0 auto', marginLeft: '10px' }}>
                             <Button 
                                 type="text" 
                                 icon={<MenuOutlined style={{fontSize: '18px', color: SECONDARY_COLOR}} />} 
@@ -117,7 +117,7 @@ function Mobile() {
 
             <Layout.Content>
                 {/* cover headline */}
-                <Row justify='center' align='middle' style={{'backgroundColor': 'white', 'height': '800px', 'paddingTop': '50px', 'paddingLeft': '20px', 'paddingRight': '20px'}}>
+                <Row justify='center' align='middle' style={{'height': '800px', 'paddingTop': '50px', 'paddingLeft': '20px', 'paddingRight': '20px'}}>
                     <Row justify='center'>
                         <Typography.Title level={2}>
                             {state.coverTitle}
@@ -130,10 +130,10 @@ function Mobile() {
                         </Typography>
                     </Row>
 
-                    <Row justify='space-around' style={{ 'marginBottom': '30px'}}>
+                    <Row justify='center' style={{ 'marginBottom': '30px'}}>
                         {
                             state.appleStoreLink &&
-                            <Col style={{'width': '45%', 'paddingRight': '50px'}}>
+                            <Col  style={{'width': '45%'}}>
                                 <Row justify='center' style={{ marginBottom: '10px' }}>
                                     <Typography.Title level={4} style={{ color: SECONDARY_COLOR, margin: 0 }}>
                                         iOS
@@ -152,7 +152,7 @@ function Mobile() {
                             </Col>
                             
                         }
-                        <Col style={{'width': '45%', 'paddingRight': '50px'}}>
+                        <Col style={{'width': '45%'}}>
                             <Row justify='center' style={{ marginBottom: '10px' }}>
                                 <Typography.Title level={4} style={{ color: SECONDARY_COLOR, margin: 0 }}>
                                     Android

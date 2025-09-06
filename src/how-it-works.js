@@ -111,7 +111,7 @@ function HowItWorks() {
                   3. Engage with Events
                 </Title>
                 <Paragraph style={{ fontSize: '16px' }}>
-                  Once you unlock a building, you will see the events happening at the building and get notified when new events are posted.
+                  Once you unlock a building, you will see the events happening at the building and get notified when new events are posted. Check in using the app and get rewards!
                 </Paragraph>
               </div>
             </Col>
@@ -177,58 +177,81 @@ function HowItWorks() {
                 <Paragraph style={{ fontSize: '16px', color: '#666', marginBottom: '30px' }}>
                   Download RamRoutes today and begin your Cornell campus adventure!
                 </Paragraph>
-                    <Row justify='space-around' style={{ 'marginBottom': '30px'}}>
+                    <Row justify='space-around' style={{ 'marginBottom': '30px'}} gutter={[24, 24]}>
                         {
                             state.appleStoreLink &&
-                            <Col style={{'width': '45%', 'paddingRight': '50px'}}>
-                                <Row justify='center' style={{ marginBottom: '10px' }}>
-                                    <Typography.Title level={4} style={{ color: SECONDARY_COLOR, margin: 0 }}>
-                                        iOS
-                                    </Typography.Title>
-                                </Row>
-                                <Row justify='center' style={{ marginBottom: '10px' }}>
-                                    <Typography.Text style={{ fontSize: '14px', textAlign: 'center' }}>
-                                        RamRoutes is now available for iOS!
-                                    </Typography.Text>
-                                </Row>
-                                <Row justify='center'>
-                                <a href={state.appleStoreLink} target='_blank' rel="noopener noreferrer">
-                                    <Image height={50} width={150} preview={false} src={state.appleStoreBadge}></Image>
-                                </a>
-                                </Row>
+                            <Col xs={24} md={12} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                                <div style={{ 
+                                    display: 'flex', 
+                                    flexDirection: 'column', 
+                                    height: '100%', 
+                                    justifyContent: 'space-between',
+                                    padding: '20px',
+                                    background: '#f9f9f9',
+                                    borderRadius: '8px'
+                                }}>
+                                    <div>
+                                        <Row justify='center' style={{ marginBottom: '10px' }}>
+                                            <Typography.Title level={4} style={{ color: SECONDARY_COLOR, margin: 0 }}>
+                                                iOS
+                                            </Typography.Title>
+                                        </Row>
+                                        <Row justify='center' style={{ marginBottom: '20px' }}>
+                                            <Typography.Text style={{ fontSize: '14px', textAlign: 'center' }}>
+                                                RamRoutes is now available for iOS! Download it from the App Store.
+                                            </Typography.Text>
+                                        </Row>
+                                    </div>
+                                    <Row justify='center'>
+                                        <a href={state.appleStoreLink} target='_blank' rel="noopener noreferrer">
+                                            <Image height={50} width={150} preview={false} src={state.appleStoreBadge}></Image>
+                                        </a>
+                                    </Row>
+                                </div>
                             </Col>
-                            
                         }
-                        <Col style={{'width': '45%', 'paddingRight': '50px'}}>
-                            <Row justify='center' style={{ marginBottom: '10px' }}>
-                                <Typography.Title level={4} style={{ color: SECONDARY_COLOR, margin: 0 }}>
-                                    Android
-                                </Typography.Title>
-                            </Row>
-                            <Row justify='center' style={{ marginBottom: '10px' }}>
-                                <Typography.Text style={{ fontSize: '14px', textAlign: 'center' }}>
-                                    Request access to the Android app
-                                </Typography.Text>
-                            </Row>
-                            <Row justify='center'>
-                                <Button 
-                                    type="primary" 
-                                    size="large"
-                                    onClick={() => setAndroidFormVisible(true)}
-                                    style={{ 
-                                        backgroundColor: SECONDARY_COLOR, 
-                                        borderColor: SECONDARY_COLOR, 
-                                        fontSize: '12px',
-                                        width: '150px',
-                                        height: '50px',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
-                                    }}
-                                >
-                                    Request Android Access
-                                </Button>
-                            </Row>
+                        <Col xs={24} md={12} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                            <div style={{ 
+                                display: 'flex', 
+                                flexDirection: 'column', 
+                                height: '100%', 
+                                justifyContent: 'space-between',
+                                padding: '20px',
+                                background: '#f9f9f9',
+                                borderRadius: '8px'
+                            }}>
+                                <div>
+                                    <Row justify='center' style={{ marginBottom: '10px' }}>
+                                        <Typography.Title level={4} style={{ color: SECONDARY_COLOR, margin: 0 }}>
+                                            Android
+                                        </Typography.Title>
+                                    </Row>
+                                    <Row justify='center' style={{ marginBottom: '20px' }}>
+                                        <Typography.Text style={{ fontSize: '14px', textAlign: 'center' }}>
+                                            Request access to the Android app. We'll send you the download link.
+                                        </Typography.Text>
+                                    </Row>
+                                </div>
+                                <Row justify='center'>
+                                    <Button 
+                                        type="primary" 
+                                        size="large"
+                                        onClick={() => setAndroidFormVisible(true)}
+                                        style={{ 
+                                            backgroundColor: SECONDARY_COLOR, 
+                                            borderColor: SECONDARY_COLOR, 
+                                            fontSize: '12px',
+                                            width: '150px',
+                                            height: '50px',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center'
+                                        }}
+                                    >
+                                        Request Android Access
+                                    </Button>
+                                </Row>
+                            </div>
                         </Col>
                         
                     </Row>
